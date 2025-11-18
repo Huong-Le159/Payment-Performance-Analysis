@@ -1,4 +1,5 @@
 # 💳 User Behavior, Transaction Patterns & Refund Insights | E-Wallet Analytics | Python
+<img width="1576" height="854" alt="image" src="https://github.com/user-attachments/assets/b0ffee51-2fba-4cd0-95f7-426ab78b5481" />
 
 **Author:** Huong Le  
 **Domain:** Digital Payments & E-commerce Analytics  
