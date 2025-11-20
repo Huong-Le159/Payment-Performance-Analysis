@@ -53,7 +53,7 @@ This project utilizes **three** datasets:
 - `source_id` in **payment_report.csv** contributes to refund analysis.  
 
 <details>
-  <summary>Table 1: Products</summary>
+  <summary><strong>Table 1: Products</strong></summary>
 
 | Column Name  | Data Type | Description |
 |-------------|----------|-------------|
@@ -62,7 +62,7 @@ This project utilizes **three** datasets:
 | team_own    | TEXT     | Team responsible for the product |
 </details>
 <details>
-  <summary>Table 2: Payment Report</summary>
+  <summary><strong>Table 2: Payment Report</strong></summary>
 
 | Column Name    | Data Type | Description |
 |---------------|----------|-------------|
@@ -73,7 +73,7 @@ This project utilizes **three** datasets:
 | volume        | FLOAT    | Total payment volume |
 </details>
 <details>
-  <summary>Table 3: Transactions</summary>
+  <summary><strong>Table 3: Transactions</strong></summary>
 
 | Column Name    | Data Type | Description |
 |---------------|----------|-------------|
