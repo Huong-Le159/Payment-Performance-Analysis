@@ -243,9 +243,11 @@ Dataset is now fully clean, validated, and ready for Analysis.
 product_with_volume = df_payment_enriched.groupby("product_id")["volume"].sum()
 product_with_volume.sort_values(ascending=False).head(3)
 ```
-[Out]:
+<details>
+  <summary>[Out]:</summary>
 
 <img width="319" height="252" alt="image" src="https://github.com/user-attachments/assets/ec1af39a-0b42-4e2a-83b5-e875819ec8b9" />
+</details>
 
 **Insight:**  
 - A small number of products generate disproportionately high volume.  
@@ -261,11 +263,13 @@ product_with_volume.sort_values(ascending=False).head(3)
 product_with_team = df_product.groupby('product_id')['team_own'].nunique()
 product_with_team.sort_values(ascending=False).head()
 ```
-[Out]:
+<details>
+  <summary>[Out]:</summary>
 
 <img width="272" height="353" alt="image" src="https://github.com/user-attachments/assets/937c74f8-fac6-41a7-ad2f-c87bfd09149e" />
+</details>
 
-
+**Insight:**  
 - Each product should belong to exactly 1 team.
 - Validation shows all product_ids are owned by a single team → clean governance and no ownership conflict.
 
@@ -279,9 +283,11 @@ filter_data = df_payment_enriched[df_payment_enriched['report_month'] >= pd.Time
 team_with_volume = filter_data.groupby('team_own')['volume'].sum()
 team_with_volume.sort_values(ascending=True).head(1)
 ```
-[Out]:
+<details>
+  <summary>[Out]:</summary>
 
 <img width="274" height="159" alt="image" src="https://github.com/user-attachments/assets/382d8275-7c21-42bd-8cd3-12bc7d61b3cc" />
+</details>
 
 **Insight:** 
 - Filtering from 2023-04-01 onward, Team APS shows the lowest total volume.
@@ -299,9 +305,11 @@ filter_payment_group = df_payment[df_payment['payment_group'] == 'refund']
 source_with_volume = filter_payment_group.groupby('source_id')['volume'].sum()
 source_with_volume.sort_values(ascending=False).head(1)
 ```
-[Out]:
+<details>
+  <summary>[Out]:</summary>
 
 <img width="343" height="158" alt="image" src="https://github.com/user-attachments/assets/19bddd0f-1f55-45ca-adad-c9a79c6f58c6" />
+</details>
 
 **Insight:** 
 - Refunds are highly concentrated in Source ID 38, contributing the largest refund volume.
@@ -336,9 +344,11 @@ def trans_type(trans):
 df_transactions['trans_type'] = df_transactions.apply(trans_type, axis=1)
 df_transactions.head()
 ```
-[Out]:
+<details>
+  <summary>[Out]:</summary>
 
 <img width="1736" height="296" alt="image" src="https://github.com/user-attachments/assets/7439c744-9a11-46fd-b026-ffbc6c517297" />
+</details>
 
 **Insight:** 
 - Transaction rules were applied to classify: Bank Transfer, Payment, Withdraw, Top Up, Transfer, Split Bill.
@@ -358,9 +368,11 @@ df_transactions.groupby('trans_type').agg({
     'receiver_id':'count'
 })
 ```
-[Out]:
+<details>
+  <summary>[Out]:</summary>
 
 <img width="991" height="386" alt="image" src="https://github.com/user-attachments/assets/1a4a6bdd-ab4c-4514-bfe8-1b3289592375" />
+</details>
 
 **Insight:** 
 - Payment and Top Up transactions dominate both in count and volume.
